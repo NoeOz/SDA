@@ -1,0 +1,451 @@
+.Banner{
+    background-color:white;
+    height: 210px;
+}
+
+#tituloPagina
+{
+color:#b6366b;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background: white;
+margin: auto;
+}
+#logo
+{
+	margin-top: -5px;
+}
+
+
+/*=============================================
+GLOBAL
+=============================================*/
+
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+.contenedor{
+	position:relative;
+	margin:auto;
+	width:100%;
+	height: auto;
+}
+
+.fila{
+	position:relative;
+	margin:auto;
+	width:100%;
+	height: auto;
+	clear:both;
+	display:table;
+}
+
+[class*="col-"]
+{
+  
+	float:left;
+	
+	/*border:1px solid black;*/
+	padding:10px;
+}
+
+/*=============================================
+EFECTOS BOTONES
+=============================================*/
+.btn{
+	background:rgb(170, 14, 144);
+	color: #f76bc1;
+}
+
+#btnAgregarArticulo{
+	background:rgb(170, 14, 144);
+	color: #f76bc1;
+}
+
+#Agregar{
+	font: bold 18px Verdana;
+	background: #b6366b;
+	text-decoration: none;
+	color: black;
+	border: 4px solid rgb(231, 109, 109);
+	padding: 10px 10px 10px 20px;
+	border-radius: 10px;
+	transition: background .5s, color .5s;
+	-webkit-transition: background .5s, color .5s;
+	-moz-transition: background .5s, color .5s;
+	-o-transition: background .5s, color .5s;
+
+}
+
+#Agregar:hover{
+	background:#b6366b;
+	color:white;
+}
+
+#btnMostrarJuegos{
+	font: bold 18px Verdana;
+	background: #b6366b;
+	text-decoration: none;
+	color: black;
+	border: 4px solid black;
+	padding: 10px 10px 10px 20px;
+	border-radius: 10px;
+	transition: background .5s, color .5s;
+	-webkit-transition: background .5s, color .5s;
+	-moz-transition: background .5s, color .5s;
+	-o-transition: background .5s, color .5s;
+}
+
+#btnMostrarJuegos:hover{
+	background: #b6366b;
+	color:white;
+}
+
+
+
+/*=============================================
+SECCION 1
+=============================================*/
+
+header{
+	background:#d1469c;
+	color:rgb(240, 17, 110) ;
+}
+
+header #tituloPagina{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size:40px;
+	text-align:center;
+	line-height:135px;
+	margin-top: -5px;
+	margin-left: -15px;
+}
+
+header center p{
+	text-align: center;
+	width:42px;
+	line-height:42px;
+	border-radius:100%;	
+	background:#ccc;
+	color:white;
+}
+
+header #logo{
+	margin-top: -5px;
+}
+.logo{
+	width :100px;
+    height:70px;
+}
+#sa{
+	position:absolute;
+	color: #d1469c;
+	font: bold 18px Verdana;
+	background: black;
+	text-decoration: none;
+    margin-top: -11px;
+    margin-left: 2px;
+	border: 4px solid  #b6366b;
+	padding: 10px 8px 10px 8px;
+	border-radius: 10px;
+	transition: background .5s, color .5s;
+	-webkit-transition: background .5s, color .5s;
+	-moz-transition: background .5s, color .5s;
+	-o-transition: background .5s, color .5s;
+
+}
+
+#sa:hover{
+	background:#b6366b;
+	color:white;
+}
+
+#ini{
+	position:absolute;
+	color: #d1469c;
+	font: bold 18px Verdana;
+	background: black;
+	text-decoration: none;
+    margin-top: -11px;
+    margin-left: -68px;
+	border: 4px solid rgb(138, 25, 104);
+	padding: 10px 8px 10px 8px;
+	border-radius: 10px;
+	transition: background .5s, color .5s;
+	-webkit-transition: background .5s, color .5s;
+	-moz-transition: background .5s, color .5s;
+	-o-transition: background .5s, color .5s;
+}
+
+#ini:hover{
+	background:#d1469c;
+	color:white;
+}
+
+.ventana{
+	width: 100%;
+    height: 100%;
+    color: #fff;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.767);
+    /*background-image: url(../img/fondo.png);*/
+    top: 0;
+    left: 0;
+	display: none;
+	z-index: 1000;
+
+}
+
+.form{
+	position:absolute;
+	padding: 25px;
+	width: 300px;
+	height: 200px;
+	background: #fff;
+	color: rgb(117, 74, 112);
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -175px;
+}
+
+.cerrar{
+    text-align: right;
+    font-weight: 900;
+    font-size: .8cm;
+}
+.cerrar *{
+    color: red;
+}
+
+/*=============================================
+SECCION 2
+=============================================*/
+
+#seccion3{
+	padding:20px;	
+}
+
+#seccion2 img{
+	border-radius: 10%;
+	width: 210px;
+	height: 280px;
+	padding: 10px;
+}
+
+#seccion2 h1{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 40px;
+	padding: 10px;
+}
+
+
+#seccion2 p{
+	padding: 10px;
+}
+
+/*=============================================
+SECCION 6 3 imagenes
+=============================================*/
+
+#seccion6 img{
+	border-radius: 10%;
+	width: 210px;
+	height: 280px;
+	padding: 10px;
+}
+
+/*=============================================
+SECCION 7 3 imagenes
+=============================================*/
+
+#seccion7 img{
+	border-radius: 10%;
+	width: 210px;
+	height: 280px;
+	padding: 10px;
+}
+
+/*=============================================
+SECCION 8 3 imagenes
+=============================================*/
+
+#seccion8 img{
+	border-radius: 10%;
+	width: 210px;
+	height: 280px;
+	padding: 10px;
+}
+
+/*=============================================
+SECCION 3 barra de navegacion 
+=============================================*/
+
+nav ul li{
+	padding:15px;
+	text-align: center;
+}
+
+nav ul li a{
+	display: block;	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+	color: white;
+	line-height: 60px;
+}
+
+nav ul li a:hover{
+	background: #b6366b;
+}
+
+nav ul li a:active{
+	background: #b6366b;
+}
+
+/*=============================================
+SECCION 4
+=============================================*/
+
+#seccion4 #der ul li{
+	
+	background:rgb(104, 59, 98);
+	padding:10px;
+	margin:2px 10px;
+	list-style:square;
+	list-style-position:inside;
+	
+
+}
+
+#seccion4 article h1{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size:40px;
+	margin:20px;
+}
+
+
+
+/*=============================================
+SECCION 5
+=============================================*/
+
+footer{
+	padding:20px 10px;
+}
+
+footer div{
+	background: #b6366b;
+	text-align: center;
+	line-height:50px;
+	color: black;
+}
+
+
+
+
+/*=============================================
+PANTALLA DE ESCRITORIO GRANDE - LARGE (lg) - revisamos en portatil o pc
+=============================================*/
+
+@media(min-width:1200px){
+
+	.col-lg-12{width:100%;}
+	.col-lg-11{width:91.66666667%;}
+	.col-lg-10{width:83.33333333%;}
+	.col-lg-9{width:75%;}
+	.col-lg-8{width:66.66666667%;}
+	.col-lg-7{width:58.33333333%;}
+	.col-lg-6{width:50%;}
+	.col-lg-5{width:41.66666667%;}
+	.col-lg-4{width: 33.33333333%;}
+	.col-lg-3{width: 25%;}
+	.col-lg-2 {width: 16.66666667%;}
+	.col-lg-1 {width: 8.33333333%;}
+	.col-lg-0 {display:none;}
+
+	#seccion4 article p img{
+		width:50%;
+	}
+
+}
+
+/*=============================================
+PANTALLA DE ESCRITORIO MEDIANO - MEDIUM (md) - revisamos en tablet horizontal 1024px
+=============================================*/
+
+@media(max-width:1199px) and (min-width:992px){
+
+	.col-md-12{width:100%;}
+	.col-md-11{width:91.66666667%;}
+	.col-md-10{width:83.33333333%;}
+	.col-md-9{width:75%;}
+	.col-md-8{width:66.66666667%;}
+	.col-md-7{width:58.33333333%;}
+	.col-md-6{width:50%;}
+	.col-md-5{width:41.66666667%;}
+	.col-md-4{width: 33.33333333%;}
+	.col-md-3{width: 25%;}
+	.col-md-2{width: 16.66666667%;}
+	.col-md-1{width: 8.33333333%;}
+	.col-md-0 {display:none;}
+
+	#seccion4 article p img{
+		width:60%;
+	}
+}
+
+/*=============================================
+PANTALLA DE TABLET - SMALL (sm) - revisamos en tablet vertical 768px
+=============================================*/
+
+@media(max-width:991px) and (min-width:768px){
+
+	.col-sm-12{width:100%;}
+	.col-sm-11{width:91.66666667%;}
+	.col-sm-10{width:83.33333333%;}
+	.col-sm-9{width:75%;}
+	.col-sm-8{width:66.66666667%;}
+	.col-sm-7{width:58.33333333%;}
+	.col-sm-6{width:50%;}
+	.col-sm-5{width:41.66666667%;}
+	.col-sm-4{width: 33.33333333%;}
+	.col-sm-3{width: 25%;}
+	.col-sm-2{width: 16.66666667%;}
+	.col-sm-1{width: 8.33333333%;}
+	.col-sm-0 {display:none;}
+	
+	#seccion4 article p img{
+		width:100%;
+		margin-bottom: 20px;
+	}
+}
+
+/*=============================================
+PANTALLA DE PHONES - EXTRA SMALL (xs) - revisamos en movil horizontal 480px o vertical 320px
+=============================================*/
+
+@media(max-width:767px){
+
+	.col-xs-12{width:100%;}
+	.col-xs-11{width:91.66666667%;}
+	.col-xs-10{width:83.33333333%;}
+	.col-xs-9{width:75%;}
+	.col-xs-8{width:66.66666667%;}
+	.col-xs-7{width:58.33333333%;}
+	.col-xs-6{width:50%;}
+	.col-xs-5{width:41.66666667%;}
+	.col-xs-4{width: 33.33333333%;}
+	.col-xs-3{width: 25%;}
+	.col-xs-2{width: 16.66666667%;}
+	.col-xs-1{width: 8.33333333%;}
+	.col-xs-0 {display:none;}
+
+	#seccion4 article p img{
+		width:100%;
+		margin-bottom: 20px;
+	}
+
+}

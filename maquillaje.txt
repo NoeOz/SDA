@@ -1,0 +1,283 @@
+CREATE TABLE roles (
+
+idRol int NOT NULL AUTO_INCREMENT,
+
+tipoRol varchar(200),
+
+activo integer,
+
+fechaRegistro date,
+
+UsuarioId integer,
+
+CONSTRAINT pk_prove PRIMARY KEY(idRol)
+
+);
+
+
+
+CREATE TABLE permisos (
+
+idPermiso integer NOT NULL AUTO_INCREMENT,
+
+nombrePermiso varchar(200),
+
+rolId integer,
+
+UsuarioId integer,
+
+departamentoId integer,
+
+activo integer,
+
+fechaRegistro date,
+
+CONSTRAINT pk_prove PRIMARY KEY(idPermiso)
+
+);
+
+
+
+CREATE TABLE departamentos (
+
+iddepartamento int NOT NULL AUTO_INCREMENT,
+
+nomDepartamento varchar(200),
+
+status varchar(50),
+
+descripcion varchar(50),
+
+fechaRegistro date,
+
+fechaActualizacion date,
+
+CONSTRAINT pk_prove PRIMARY KEY(iddepartamento)
+
+);
+
+
+
+CREATE TABLE usuarios (
+
+idUsuario integer NOT NULL AUTO_INCREMENT,
+
+nombre varchar(70), 
+
+email varchar(70),
+
+password varchar(50),
+
+idRol varchar(50),
+
+emailExtra varchar(50),
+
+fechaRegistro date,
+
+fechaActualizacion date,
+
+firmaDigital varchar(50),
+
+departamentoId varchar(20),
+
+CONSTRAINT pk_prove PRIMARY KEY(idUsuario)
+
+);
+
+
+
+CREATE TABLE estados (
+
+idEdo int NOT NULL AUTO_INCREMENT,
+
+nombreEdo varchar(50),
+
+abreviatura varchar(50),
+
+CONSTRAINT pk_prove PRIMARY KEY(idEdo)
+
+);
+
+CREATE TABLE municipios (
+
+idMunicipio int NOT NULL AUTO_INCREMENT,
+
+EdoId integer,
+
+nombreMunic varchar(200),
+
+abreviatura varchar(200),
+
+CONSTRAINT pk_prove PRIMARY KEY(idMunicipio)
+
+);
+
+
+
+CREATE TABLE proveedores(
+
+idProveedor integer not null AUTO_INCREMENT,
+
+nombreProveedor varchar(80),
+
+calle varchar(180),
+
+colonia varchar(180),
+
+estadoId int,
+
+municipioId int,
+
+telefonoProveedor varchar(50),
+
+paginaWeb varchar(50),
+
+representante varchar(50),
+
+CONSTRAINT pk_prove PRIMARY KEY(idProveedor)
+
+);
+
+
+
+
+
+
+
+CREATE TABLE categorias(
+
+idCategoria integer not null AUTO_INCREMENT,
+
+nomCategoria_prod varchar(50),
+
+descCategoria varchar(80),
+
+CONSTRAINT pk_idcategorias PRIMARY KEY(idCategoria)
+
+);
+
+insert into categorias (
+
+idCategoria,
+
+nomCategoria_prod,
+
+descCategoria) values (1, 'plomeria', 'cobre-aluminio');
+
+
+
+insert into categorias (idCategoria,
+
+nomCategoria_prod,
+
+descCategoria) values (2, 'carpinteria', 'cedro-pino');
+
+
+
+insert into categorias (idCategoria,
+
+nomCategoria_prod,
+
+descCategoria) values (3, 'ferreteria', 'todas las marcas');
+
+
+
+
+
+
+
+CREATE TABLE productos(
+
+idProducto integer not null AUTO_INCREMENT,
+
+nombreProd varchar(80),
+
+marca varchar(80),
+
+costo float,
+
+origen varchar(80),
+
+descripcion varchar(100),
+
+fechaAdquisicion date,
+
+precio float,
+
+foto varchar(90),
+
+CONSTRAINT pk_idprod PRIMARY KEY(idProducto)
+
+);
+
+
+
+CREATE TABLE clientes (
+
+idCliente integer NOT NULL AUTO_INCREMENT,
+
+email varchar(50),
+
+tipoCliente varchar(20),
+
+nombreEmpresa varchar(50),
+
+rfc varchar(50),
+
+telCliente varchar(50),
+
+nombreCliente varchar(50),
+
+apellidoPaterno varchar(30),
+
+apellidoMaterno varchar(30),
+
+CONSTRAINT pk_idcli PRIMARY KEY(idCliente)
+
+
+
+);
+
+
+
+CREATE TABLE ventas(
+
+idVentas integer not null AUTO_INCREMENT,
+
+clienteId integer,
+
+subTotal float,
+
+Total float,
+
+fechaVenta date,
+
+CONSTRAINT pk_idventa PRIMARY KEY(idVentas),
+
+CONSTRAINT fk_clientes FOREIGN KEY(clienteId) REFERENCES clientes(idCliente)
+
+);
+
+
+
+CREATE TABLE detalle_venta(
+
+idDetalleVenta integer not null AUTO_INCREMENT,
+
+cantidadVendida float,
+
+ventasId integer,
+
+prodId varchar(80),
+
+CONSTRAINT pk_id_detalleVenta PRIMARY KEY(idDetalleVenta),
+
+CONSTRAINT fk_ventas FOREIGN KEY(ventasId) REFERENCES ventas(idVentas)
+
+
+
+);
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
